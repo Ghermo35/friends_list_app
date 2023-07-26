@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+/* App.css */
+
+.app-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-header {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 20px;
+  font-weight: bold;
+  color: #4c2f91; /* UW brand color */
+  margin-bottom: 20px;
+}
+
+.app-name {
+  margin-right: auto;
+}
+
+.search-bar-container {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.search-bar {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-friend-button {
+  padding: 8px 16px;
+  background-color: #4c2f91;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.friends-container,
+.suggested-friends-container {
+  margin-top: 20px;
+}
+
+.friends-container h3,
+.suggested-friends-container h3 {
+  margin-bottom: 10px;
+}
+
+.friend,
+.suggested-friend {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.suggested-friend {
+  background-color: #f0f0f0;
+}
+
+.friend.blocked,
+.suggested-friend.blocked {
+  background-color: #ffcccc; /* Light red background for blocked friends */
+}
+
+.block-button,
+.unblock-button,
+.unfriend-button {
+  padding: 4px 8px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.block-button {
+  background-color: #f44336; /* Red for block button */
+  color: #ffffff;
+}
+
+.unblock-button {
+  background-color: #4caf50; /* Green for unblock button */
+  color: #ffffff;
+}
+
+.unfriend-button {
+  background-color: #ff9800; /* Orange for unfriend button */
+  color: #ffffff;
 }
